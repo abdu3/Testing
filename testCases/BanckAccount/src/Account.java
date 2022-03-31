@@ -1,0 +1,20 @@
+/**
+ * Created by Abdurzaq on 30/03/2022.
+ */
+public class Account {
+    public double calcIntreset(double balance){
+        double interest=0;
+        if(balance<0)
+            throw new IllegalArgumentException("invalid");
+
+        if(balance>=0 && balance<=100)
+            interest+=0.03*balance;
+
+        if(balance>100 && balance<1000)
+            interest+=0.05*balance;
+
+        if(balance>=1000)
+            interest+=0.07*balance;
+        return interest;
+    }
+}
